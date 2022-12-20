@@ -3,6 +3,7 @@ export function uploadPhoto() {
       status: 200,
       body: 'photo-profile-1',
     });
+    // return Promise.reject(new Error('Error'));
   }
   
   
