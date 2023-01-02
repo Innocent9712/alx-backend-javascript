@@ -10,6 +10,13 @@ queryAPI(endpoint);
 console.log(weakMap.get(endpoint));
 
 queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
 queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
 queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
 queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
