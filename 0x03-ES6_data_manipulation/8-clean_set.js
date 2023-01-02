@@ -4,9 +4,9 @@ export default function cleanSetFromArray(set, startString) {
     return '';
   }
   for (const value of set) {
-    if (value.startsWith(startString)) {
-      newArr.push(value.split(startString)[1]);
-    }
+    if (typeof value === 'string' && value.startsWith(startString)) {
+        newArr.push(value.slice(startString.length));
+      }
   }
   return newArr.join('-');
 }
