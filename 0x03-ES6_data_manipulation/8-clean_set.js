@@ -5,8 +5,8 @@ export default function cleanSetFromArray(set, startString) {
   }
   for (const value of set) {
     if (typeof value === 'string' && value.startsWith(startString)) {
-        newArr.push(value.slice(startString.length));
-      }
+      newArr.push(value.slice(startString.length));
+    }
   }
   return newArr.join('-');
 }
