@@ -40,3 +40,27 @@ function createEmployee(salary: number | string): DirectorInterface | TeacherInt
     }
 }
 
+function isDirector(employee: DirectorInterface | TeacherInterface): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
+    // if (isDirector(employee)) {
+    //     return employee.workDirectorTasks();
+    // } else {
+    //     return employee.workTeacherTasks();
+    // }
+    return isDirector(employee) ? employee.workDirectorTasks() : employee.workTeacherTasks();
+}
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else if (todayClass === 'History') {
+        return 'Teaching History';
+    }
+}
+
+console.log(teachClass('History'));
